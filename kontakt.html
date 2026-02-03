@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/medic-icon.png" type="image/png">
+</head>
+<body>
+        <nav class="main-nav">
+        <div class="logo">
+            <img src="image/medic-icon.png" alt="Мед плюс" width="80px" height="80px"> 
+        </div>
+        <p class="nav-text">Городская Поликлиника Рахма</p>
+        <ul class="nav-links">
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="about-the-polyclinic.html">О ПОЛИКЛИНИКЕ</a></li>
+            <li><a href="departments.html">ОТДЕЛЕНИЯ</a></li>
+            <li><a href="patients.html">ПАЦИЕНТАМ</a></li>
+            <li><a href="kontakt.html">КОНТАКТЫ</a></li>
+        </ul>
+    </nav>
+    <h1>Обратная Связь</h1>
+  <form action="https://formspree.io" method="POST" class="contact-form">
+        
+  <div class="contact-field">
+    <label class="contact-label" for="user_name">Имя</label>
+    <input class="contact-input" type="text" id="user_name" name="name" required>
+  </div>
+
+  <div class="contact-field">
+    <label class="contact-label" for="user_email">Почта</label>
+    <input class="contact-input" type="email" id="user_email" name="email" required>
+  </div>
+
+  <div class="contact-field">
+    <label class="contact-label" for="user_subject">Тема</label>
+    <input class="contact-input" type="text" id="user_subject" name="subject">
+  </div>
+
+  <div class="contact-field">
+    <label class="contact-label" for="user_message">Ваше сообщение</label>
+    <textarea class="contact-textarea" id="user_message" name="message" rows="4" required></textarea>
+  </div>
+
+  <button type="submit" class="contact-button">Отправить</button>
+</form>
+
+    <p class="kontacts">Контакный номер 8 (928) 512-55-23</p>
+    <h1 class="adress">Полный адрес Хасавюртовской поликлиники Рахма: Республика Дагестан, Хасавюрт, улица Тотурбиева, 68.</h1>
+    <div class="maps" >
+        
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2905.897021297788!2d46.5813446!3d43.25358!3m2!1i1024!2i768!4f13.1!2m1!1z0YXQsNGB0LDQstGO0YDRgtC-0LLRgdC60LDRjyDRgNCw0LnQvtC90L3QsNGPINC_0L7Qu9C40LrQu9C40L3QuNC60LA!5e0!3m2!1sru!2sru!4v1769407813334!5m2!1sru!2sru"
+        
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-section">
+            <h4>Полезные ресурсы</h4>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about-the-polyclinic.html">О поликлинике</a></li>
+                <li><a href="departments.html">Отделения</a></li>
+                <li><a href="patients.html">Пациентам</a></li>
+                <li><a href="kontakt.html">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p><strong>Почта:</strong> maga180819@gmail.com</p>
+            <p><strong>Телефон:</strong> +7 (928) 513-70-19</p>
+            <p><strong>Адрес:</strong>Республика Дагестан, Хасавюрт, улица Тотурбиева, 68.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>О нас</h4>
+            <p>Врачебная амбулатория заботится о вашем здоровье каждый день.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2023 Ваша Амбулатория. Все права защищены.
+    </div>
+</footer>
+
+</body>
+</html>
