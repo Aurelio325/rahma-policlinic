@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/medic-icon.png" type="image/png">
+</head>
+<body>
+        <nav class="main-nav">
+        <div class="logo">
+            <img src="image/medic-icon.png" alt="Мед плюс" width="80px" height="80px"> 
+        </div>
+        <p class="nav-text">Городская Поликлиника Рахма</p>
+        <ul class="nav-links">
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="about-the-polyclinic.html">О ПОЛИКЛИНИКЕ</a></li>
+            <li><a href="departments.html">ОТДЕЛЕНИЯ</a></li>
+            <li><a href="patients.html">ПАЦИЕНТАМ</a></li>
+            <li><a href="kontakt.html">КОНТАКТЫ</a></li>
+        </ul>
+    </nav>
+    <h1 class="bl">Обратная Связь</h1>
+
+    <section id="online-requests" class="online-requests">
+  <h2>Онлайн‑заявка</h2>
+  <p>Коротко заполните форму — мы свяжемся для подтверждения.</p>
+
+   <form id="request-form" method="POST" action="https://formspree.io/f/mwvbwjka" novalidate>
+    <input type="hidden" name="_subject" value="Онлайн‑заявка">
+
+    <label>Услуга
+      <select name="service" required>
+        <option value="">Выберите услугу</option>
+        <option>Консультация терапевта</option>
+        <option>Консультация специалиста</option>
+        <option>УЗИ</option>
+        <option>Лабораторные исследования</option>
+        <option>Вызов на дом</option>
+      </select>
+    </label>
+
+    <label>ФИО
+      <input name="name" type="text" required placeholder="Иван Иванов">
+    </label>
+
+    <label class="highlight-email">Email для связи (сюда приходят обращения)
+      <input name="email" type="email" required placeholder="email@example.com">
+      <small class="email-note">Сообщения получит: <strong>maga180819@gmail.com</strong></small>
+    </label>
+
+    <label>Телефон
+      <input name="phone" type="tel" required placeholder="+7 (___) ___-__-__">
+    </label>
+
+    <label>Дата и время
+      <div class="datetime-row">
+        <input name="date" type="date" required>
+        <input name="time" type="time">
+      </div>
+    </label>
+
+    <label>Комментарий
+      <textarea name="message" rows="2" placeholder="Кратко о проблеме или пожелании"></textarea>
+    </label>
+
+    <label class="consent">
+      <input name="consent" type="checkbox" required> Согласен(на) на обработку персональных данных
+    </label>
+
+    <button type="submit" class="contact-button">Отправить</button>
+    <div id="request-feedback" class="request-feedback" role="status" aria-live="polite"></div>
+  </form>
+</section>
+
+  <script class="formspree">
+(function(){
+  const form = document.getElementById('request-form');
+  const feedback = document.getElementById('request-feedback');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    feedback.textContent = 'Отправка...';
+    const data = new FormData(form);
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      if (res.ok) { feedback.textContent = 'Заявка отправлена. Мы свяжемся с вами.'; form.reset(); }
+      else { const err = await res.json(); feedback.textContent = err?.error || 'Ошибка отправки. Попробуйте позже.'; }
+    } catch { feedback.textContent = 'Ошибка сети. Попробуйте снова.'; }
+  });
+})();
+</script>
+
+    <p class="kontacts">Контакный номер 8 (928) 512-55-23</p>
+    <h1 class="adress">Полный адрес Хасавюртовской поликлиники Рахма: Республика Дагестан, Хасавюрт, улица Тотурбиева, 68.</h1>
+    <div class="maps" >
+        
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2905.897021297788!2d46.5813446!3d43.25358!3m2!1i1024!2i768!4f13.1!2m1!1z0YXQsNGB0LDQstGO0YDRgtC-0LLRgdC60LDRjyDRgNCw0LnQvtC90L3QsNGPINC_0L7Qu9C40LrQu9C40L3QuNC60LA!5e0!3m2!1sru!2sru!4v1769407813334!5m2!1sru!2sru"
+        
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-section">
+            <h4>Полезные ресурсы</h4>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about-the-polyclinic.html">О поликлинике</a></li>
+                <li><a href="departments.html">Отделения</a></li>
+                <li><a href="patients.html">Пациентам</a></li>
+                <li><a href="kontakt.html">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p><strong>Почта:</strong> maga180819@gmail.com</p>
+            <p><strong>Телефон:</strong> +7 (928) 513-70-19</p>
+            <p><strong>Адрес:</strong>Республика Дагестан, Хасавюрт, улица Тотурбиева, 68.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>О нас</h4>
+            <p>Врачебная амбулатория заботится о вашем здоровье каждый день.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2023 Ваша Амбулатория. Все права защищены.
+    </div>
+</footer>
+
+</body>
+</html>
